@@ -1,0 +1,24 @@
+{
+  "name": "static-generator",
+  "bin": {
+    "stat-gen": "bin/stat-gen.js"
+  },
+  "preferGlobal": "true",
+  "dependencies": {
+    "express": "^4.2.0",
+    "underscore": "^1.6.0",
+    "marked": "^0.3.1",
+    "jade": "^1.1.5",
+    "stylus": "^0.45.1",
+    "browserify": "^4.1.5",
+    "axis-css": "^0.1.8",
+    "debowerify": "^0.7.1",
+    "async": "^0.9.0",
+    "gaze": "^0.5.1",
+    "tiny-lr": "^0.0.7",
+    "request": "^2.34.0",
+    "ncp": "^0.5.0",
+    "uglify-js": "^2.4.12",
+    "front-matter": "^0.2.0"
+  }
+}
