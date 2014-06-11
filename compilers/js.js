@@ -33,12 +33,14 @@ module.exports.compile = function( done ) {
 
   }, function( err ) {
 
+    if ( err ) throw err;
+
     var js = process.env.NODE_ENV === 'production'
       ? uglify.minify( compiled_js, { fromString: true } ).code
       : compiled_js;
       
     module.exports.result = js;
-    done( err );
+    done();
 
   } );
 

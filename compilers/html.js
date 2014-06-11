@@ -48,8 +48,11 @@ module.exports.compile = function( done ) {
   locals.content = loader.data.content;
     
   jade.renderFile( 'jade/index.jade', locals, function( err, html ) {
+  
+    if ( err ) throw err;
     module.exports.result = html;
-    done( err );
+    done();
+  
   } );
 
 };

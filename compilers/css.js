@@ -27,8 +27,11 @@ module.exports.compile = function( done ) {
     .set( 'compress', compress )
     .use( require( 'axis-css' )() )
     .render( function( err, css ) {
+
+      if ( err ) throw err;
       module.exports.result = css;
-      done( err );
+      done();
+    
     } );
 
 };

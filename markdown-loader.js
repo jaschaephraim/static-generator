@@ -79,11 +79,14 @@ function generateReadDir( dirname ) {
   return function( done ) {
 
     fs.readdir( dirname, function( err, files ) {
+
+      if ( err ) throw err;
       for ( var i in files ) {
         var basename = files[ i ].split( '.' )[ 0 ];
         file_loaders.push( generateLoadFile( [ dirname, basename ] ) );
       }
-      done( err );
+      done();
+    
     } );
 
   };
