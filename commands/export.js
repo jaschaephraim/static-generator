@@ -45,7 +45,7 @@ module.exports = function( args ) {
 
   // Create export directory, compile, and write.
   fs.mkdir( dest_dir, function( err ) {
-    if ( err ) throw err;
+    if ( err && err.code !== 'EEXIST' ) throw err;
     compilers.compileAll( writeAll );
   } );
 
