@@ -83,6 +83,7 @@ function generateReadDir( dirname ) {
       if ( err ) throw err;
       for ( var i in files ) {
         var basename = files[ i ].split( '.' )[ 0 ];
+        if ( basename === '' ) continue;
         file_loaders.push( generateLoadFile( [ dirname, basename ] ) );
       }
       done();
