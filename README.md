@@ -3,15 +3,16 @@
 Built specifically to manage [jaschaephraim.com](http://jaschaephraim.com), and explained in detail in this [article on medium.com](https://medium.com/@jaschaephraim/building-a-minimal-static-website-generator-and-development-environment-with-node-js-91fc153c189e).
 
 - [CLI](#cli)
-    + [stat-gen new](#stat-gen-start-project-dir)
-    + [stat-gen start](#stat-gen-new-new-project-dir)
+    + [stat-gen new](#stat-gen-new-new-project-dir)
+    + [stat-gen start](#stat-gen-start-project-dir)
     + [stat-gen export](#stat-gen-export-project-dir-new-export-dir)
 - [Project Structure](#project-structure)
-    + [jade/index.jade](#viewsindexjade)
-    + [styl/app.styl](#appstyl)
-    + [js/app.js](#appjs)
-    + [static/img/](#img)
+    + [jade/index.jade](#jadeindexjade)
+    + [styl/app.styl](#stylappstyl)
+    + [js/app.js](#jsappjs)
+    + [static/](#static)
     + [content/](#content)
+    + [tags/](#tags)
 
 ## CLI
 
