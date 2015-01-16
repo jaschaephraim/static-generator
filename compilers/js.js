@@ -3,6 +3,7 @@
  * @module compilers/js
  */
 
+var debowerify = require( 'debowerify' );
 var uglify = require( 'uglify-js' );
 var stream = require( '../stream' );
 
@@ -11,7 +12,7 @@ var config = require( cwd + '/config.json' );
 
 var no_parse = config.browserify_noparse;
 var browserify = require( 'browserify' )( { noParse: no_parse } );
-browserify.transform( { global: true }, 'debowerify' );
+browserify.transform( debowerify, { global: true } );
 browserify.add( cwd + '/js/app.js' );
 
 module.exports.filename = 'app.min.js';
