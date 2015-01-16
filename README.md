@@ -1,6 +1,6 @@
 # Minimal Static Website Generator and Development Environment
 
-Built specifically for [jaschaephraim.com](http://jaschaephraim.com)
+Built specifically to manage [jaschaephraim.com](http://jaschaephraim.com), and explained in detail in this [article on medium.com](https://medium.com/@jaschaephraim/building-a-minimal-static-website-generator-and-development-environment-with-node-js-91fc153c189e).
 
 - [CLI](#cli)
     + [stat-gen new](#stat-gen-start-project-dir)
