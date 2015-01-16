@@ -89,8 +89,8 @@ html
     h1= tags.dogs.title
     div!= tags.dogs.body
     each dog in tags.dogs.content
-      h2= dog.title
-      div!= dog.body
+      h2= content[dog].title
+      div!= content[dog].body
 ```
 
 Will render to `index.html` as:
