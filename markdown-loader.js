@@ -80,7 +80,13 @@ function generateReadDir( dirname ) {
 
     fs.readdir( dirname, function( err, files ) {
 
-      if ( err ) throw err;
+      if ( err ) {
+        // Return if dir doesn't exist
+        if ( err.code === 'ENOENT' )
+          return done();
+        throw err;
+      }
+      
       for ( var i in files ) {
         var basename = files[ i ].split( '.' )[ 0 ];
         if ( basename === '' ) continue;

@@ -68,8 +68,17 @@ module.exports = function( args ) {
 
         console.log( 'copying static files' );
 
+        var static_files;
+        try {
+          static_files = fs.readdirSync( 'static' );
+        } catch( err2 ) {
+          // Return if dir doesn't exist
+          if ( err2.code === 'ENOENT' )
+            return;
+          throw ( err2 );
+        }
+
         var copies = [];
-        var static_files = fs.readdirSync( 'static' );
         for ( var i in static_files )
           copies.push( generateCopy( static_files[ i ] ) );
         
